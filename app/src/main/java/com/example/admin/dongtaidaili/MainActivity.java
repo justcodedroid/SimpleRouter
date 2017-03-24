@@ -11,6 +11,7 @@ import java.io.InputStream;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
+import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +24,10 @@ public class MainActivity extends AppCompatActivity {
         router = new Router.RouterBuilder(this).builder();
     }
     public void click(View v){
-        router.create(SecondActivityService.class).startSecondActivity();
+        HashMap<String, String> agrsMap = new HashMap<>();
+        agrsMap.put("id","101");
+        agrsMap.put("name","张三");
+        agrsMap.put("age","18");
+        router.create(SecondActivityService.class).startSecondActivity(agrsMap);
     }
 }

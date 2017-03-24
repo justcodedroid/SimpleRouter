@@ -8,6 +8,7 @@
     tools:context="com.example.admin.dongtaidaili.SecondActivity"
     tools:showIn="@layout/activity_second">
 <TextView
+    android:id="@+id/tv"
     android:text="SecondActivity"
     android:gravity="center"
     android:layout_width="match_parent"
